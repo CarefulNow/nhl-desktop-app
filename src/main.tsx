@@ -8,6 +8,7 @@ import { TauriProvider } from "./context/TauriProvider";
 import "./styles.css";
 import { SettingsProvider } from "./context/SettingsProvider";
 import Standings from "./routes/standings.tsx";
+import Schedule from "./routes/schedule.tsx";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Standings />,
+            },
+            {
+                path: "/schedule",
+                element: <Schedule />
             },
             {
                 path: "/settings",

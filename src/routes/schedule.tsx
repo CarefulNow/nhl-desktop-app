@@ -2,10 +2,10 @@ import {useEffect, useState} from "react";
 import {invoke} from "@tauri-apps/api/core";
 import {Paper} from "@mui/material";
 
-export default function Standings() {
+export default function Schedule() {
     const [schedule, setSchedule] = useState<Team[]>([]);
 
-    type Standings = {
+    type Schedule = {
         standings: Team[]
     }
     type Team = {
@@ -15,7 +15,7 @@ export default function Standings() {
 
     useEffect(
         () => {
-            invoke<Standings>("get_schedule", )
+            invoke<Schedule>("get_schedule", )
                 .then((data) => setSchedule(data.standings))
         },
     )

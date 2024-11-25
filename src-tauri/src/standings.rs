@@ -47,8 +47,6 @@ impl Team {
     }
 }
 
-// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-
 #[tauri::command]
 pub fn get_standings() -> Standings {
     let response = reqwest::blocking::get("https://api-web.nhle.com/v1/standings/now")

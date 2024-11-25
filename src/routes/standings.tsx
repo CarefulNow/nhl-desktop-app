@@ -44,7 +44,7 @@ export default function Standings() {
     return (
         <Paper sx={{ height: '100%', width: '100%' }}>
             <Box>
-                <FormControl className={"object-center"}>
+                <FormControl className="object-center">
                     <InputLabel variant="standard" htmlFor="uncontrolled-native">
                         Standings
                     </InputLabel>
